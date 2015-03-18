@@ -32,7 +32,7 @@ function createNewDiv(id) {
   role_checkboxes.each(function(index, element){
     $(element).attr('id', $(element).attr('id').replace('template', id));
     $(element).attr('name', $(element).attr('name').replace('template', id));
-  })
+  });
 
   $('.default_members').append(new_div);
   new_div.show();
