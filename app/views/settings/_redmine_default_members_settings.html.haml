@@ -1,0 +1,41 @@
+- content_for :header_tags do
+  = javascript_include_tag 'application', plugin: 'redmine_default_members'
+
+%div{ id: "settings_template", class: 'box', style: 'display: none;' }
+  %p
+    %label{ class: 'default_group' }= l(:default_group) + ' :'
+    = select_tag "settings[template][group]", options_from_collection_for_select(Group.givable.all, 'name', 'name')
+
+  %p
+    %label{ class: 'default_role' }= l(:default_roles) + ' :'
+    %br
+    = hidden_field_tag "settings[template][roles][]", ''
+    - Role.sorted.each do |role|
+      %label{ class: 'role', for: "settings_template_roles_#{role.to_s.downcase}" }= role.to_s
+      = check_box_tag "settings[template][roles][]", role.id, false, id: "settings_template_roles_#{role.to_s.downcase}"
+      %br
+
+  = link_to 'Delete default members', '#', onclick: "deleteDefaultMember('#settings_template'); return false;"
+
+.default_members
+  - if Setting.plugin_redmine_default_members.is_a?(Hash)
+    - Setting.plugin_redmine_default_members.each do |key, default_members|
+      - next if key == 'template'
+
+      %div{ id: "settings_#{key}", class: 'box' }
+        %p
+          %label{ class: 'group' }= l(:default_group, id: key) + ' :'
+          = select_tag "settings[#{key}][group]", options_from_collection_for_select(Group.givable.all, 'name', 'name', default_members[:group])
+
+        %p
+          %label{ class: 'role' }= l(:default_roles, id: key) + ' :'
+          %br
+          = hidden_field_tag "settings[#{key}][roles][]", ''
+          - Role.sorted.each do |role|
+            %label{ for: "settings_#{key}_roles_#{role.to_s.downcase}" }= role.to_s
+            = check_box_tag "settings[#{key}][roles][]", role.id, default_members[:roles].include?(role.id.to_s), id: "settings_#{key}_roles_#{role.to_s.downcase}"
+            %br
+
+        = link_to 'Delete default members', '#', onclick: "deleteDefaultMember('#settings_#{key}'); return false;"
+
+= link_to 'Add default members', '#', onclick: 'addDefaultMember(); return false;'
