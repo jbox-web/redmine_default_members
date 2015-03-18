@@ -8,7 +8,7 @@ Redmine::Plugin.register :redmine_default_members do
   name 'Redmine Default Members'
   author 'Nicolas Rodriguez'
   description 'This is a plugin for Redmine to add default project members'
-  version '1.0.0'
+  version '1.0-devel'
   url 'http://www.jbox-web.com'
   author_url 'mailto:nrodriguez@jbox-web.com'
 
