@@ -1,4 +1,4 @@
-## Redmine Default Members Plugin
+## ![logo](https://raw.github.com/jbox-web/redmine_default_members/gh-pages/images/redmine_logo.png) Redmine Default Members Plugin
 
 [![Code Climate](https://codeclimate.com/github/jbox-web/redmine_default_members.png)](https://codeclimate.com/github/jbox-web/redmine_default_members)
 [![Build Status](https://travis-ci.org/jbox-web/redmine_default_members.svg?branch=devel)](https://travis-ci.org/jbox-web/redmine_default_members)
