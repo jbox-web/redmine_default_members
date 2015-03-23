@@ -1,3 +1,5 @@
+require_dependency 'projects_controller'
+
 module RedmineDefaultMembers
   module Patches
     module ProjectsControllerPatch
