@@ -12,7 +12,26 @@ This plugin allows to create default members on project creation, based on Redmi
 
 ## Installation
 
-Read the documentation and more in the [Wiki](https://github.com/jbox-web/redmine_default_members/wiki).
+Assuming that you have Redmine installed :
+
+```sh
+## Before install the plugin, stop Redmine!
+
+# Switch user
+root# su - redmine
+
+# Clone Redmine Default Members plugin
+redmine$ cd REDMINE_ROOT/plugins
+redmine$ git clone https://github.com/jbox-web/redmine_default_members.git
+redmine$ cd redmine_default_members/
+redmine$ git checkout 1.0.0
+
+# Install gems and migrate database
+redmine$ cd REDMINE_ROOT/
+redmine$ bundle install --without development test
+
+## After install the plugin, start Redmine!
+```
 
 ## Contribute
 
