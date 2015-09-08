@@ -1,4 +1,4 @@
-## ![logo](https://raw.github.com/jbox-web/redmine_default_members/gh-pages/images/redmine_logo.png) Redmine Default Members Plugin
+## ![logo](https://raw.github.com/jbox-web/redmine_default_members/gh-pages/images/redmine_logo.png) Redmine Default Project Members Plugin
 
 [![GitHub license](https://img.shields.io/github/license/jbox-web/redmine_default_members.svg)](https://github.com/jbox-web/redmine_default_members/blob/devel/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/jbox-web/redmine_default_members.svg)](https://github.com/jbox-web/redmine_default_members/releases/latest)
