@@ -30,7 +30,24 @@
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>Read the documentation and more in the <a href="https://github.com/jbox-web/redmine_default_members/wiki">Wiki</a>.</p>
+<p>Assuming that you have Redmine installed :</p>
+
+<div class="highlight highlight-sh"><pre><span class="pl-c">## Before install the plugin, stop Redmine!</span>
+
+<span class="pl-c"># Switch user</span>
+root# su - redmine
+
+<span class="pl-c"># Clone Redmine Default Members plugin</span>
+redmine$ <span class="pl-c1">cd</span> REDMINE_ROOT/plugins
+redmine$ git clone https://github.com/jbox-web/redmine_default_members.git
+redmine$ <span class="pl-c1">cd</span> redmine_default_members/
+redmine$ git checkout 1.0.0
+
+<span class="pl-c"># Install gems and migrate database</span>
+redmine$ <span class="pl-c1">cd</span> REDMINE_ROOT/
+redmine$ bundle install --without development <span class="pl-c1">test</span>
+
+<span class="pl-c">## After install the plugin, start Redmine!</span></pre></div>
 
 <h2>
 <a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h2>
