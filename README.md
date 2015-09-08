@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/jbox-web/redmine_default_members.svg?branch=devel)](https://travis-ci.org/jbox-web/redmine_default_members)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jbox-web/redmine_default_members?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-## A Redmine plugin to add default members on project creation, easy ;)
+### A Redmine plugin to add default members on project creation, easy ;)
 
 This plugin allows to create default members on project creation, based on Redmine groups.
 
