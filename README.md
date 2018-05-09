@@ -4,7 +4,6 @@
 [![GitHub release](https://img.shields.io/github/release/jbox-web/redmine_default_members.svg)](https://github.com/jbox-web/redmine_default_members/releases/latest)
 [![Code Climate](https://codeclimate.com/github/jbox-web/redmine_default_members.png)](https://codeclimate.com/github/jbox-web/redmine_default_members)
 [![Build Status](https://travis-ci.org/jbox-web/redmine_default_members.svg?branch=devel)](https://travis-ci.org/jbox-web/redmine_default_members)
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jbox-web/redmine_default_members?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ### A Redmine plugin to add default members on project creation, easy ;)
 
