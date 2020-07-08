@@ -17,7 +17,7 @@ group :development, :test do
   gem 'database_cleaner'
 
   # Code coverage
-  gem 'simplecov', '~> 0.9.1'
+  gem 'simplecov', '~> 0.17.0'
   gem 'simplecov-rcov'
 
   # Junit results
