@@ -9,7 +9,8 @@ module RedmineDefaultMembers
         base.class_eval do
           unloadable
 
-          alias_method_chain :create, :default_members
+          alias_method :create_without_default_members, :create
+          alias_method :create, :create_with_default_members
         end
       end
 
