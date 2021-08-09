@@ -16,10 +16,6 @@ group :development, :test do
   gem 'faker'
   gem 'database_cleaner'
 
-  # Code coverage
-  gem 'simplecov', '~> 0.17.0'
-  gem 'simplecov-rcov'
-
   # Junit results
   gem 'ci_reporter_rspec', '~> 1.0.0'
 end
