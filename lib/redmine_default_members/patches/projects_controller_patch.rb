@@ -36,12 +36,14 @@ module RedmineDefaultMembers
           end
 
           def create_default_members
-            Setting.plugin_redmine_default_members.each do |key, default_members|
-              next if key == 'template'
-              next if default_members[:roles].empty?
-              group = Group.find_by_lastname(default_members[:group])
-              roles = Role.where(id: default_members[:roles])
-              Member.create(principal: group, role_ids: roles.map(&:id), project: @project)
+            if Setting.plugin_redmine_default_members.present?
+              Setting.plugin_redmine_default_members.each do |key, default_members|
+                next if key == 'template'
+                next if default_members[:roles].empty?
+                group = Group.find_by_lastname(default_members[:group])
+                roles = Role.where(id: default_members[:roles])
+                Member.create(principal: group, role_ids: roles.map(&:id), project: @project)
+              end
             end
           end
 

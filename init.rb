@@ -13,10 +13,12 @@ Redmine::Plugin.register :redmine_default_members do
   author_url 'mailto:nrodriguez@jbox-web.com'
 
   settings({
-    :partial => 'settings/redmine_default_members_settings',
-    :template => {
-      :group => 'Superviseur',
-      :roles => []
-    }
+    :default => {
+      'template' => {
+        'group' => 'Superviseur',
+        'roles' => []
+      }
+    },
+    :partial => 'settings/redmine_default_members_settings'
   })
 end
